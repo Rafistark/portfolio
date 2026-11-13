@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RA.FX // High-Retention Video Editor — A. Muhammed Rafi</title>
+  <meta name="description" content="Portfolio of A. Muhammed Rafi (RA.FX) — High-Retention Short-Form & Cinematic Video Editor. Specializing in fast-paced TikToks/Reels, beat-synced action cuts, kinetic captions, and sound design.">
+  
+  <!-- Sleek SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2308080a'/><polygon points='38,30 72,50 38,70' fill='%2300f2fe'/></svg>">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pitch: '#08080a',
+            cardBg: '#101014',
+            neonCyan: '#00f2fe',
+            neonEmerald: '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Modern Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#08080a] text-zinc-100 selection:bg-[#00f2fe] selection:text-black">
+
+  <!-- Ambient Background Glow -->
+  <div class="ambient-glow"></div>
+
+  <!-- ============================================================================
+       NAVBAR (DESKTOP + MOBILE)
+       ============================================================================ -->
+  <header class="fixed top-0 left-0 right-0 z-50 studio-header">
+    <div class="container-constrained py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-950 border border-white/10 flex items-center justify-center font-extrabold text-sm text-white tracking-tighter shadow-lg shadow-black/50">
+          RA<span class="text-[#00f2fe]">.</span>
+        </div>
+        <div class="leading-none">
+          <div class="font-extrabold text-sm sm:text-base tracking-wider text-white">RA.FX</div>
+          <div class="flex items-center gap-1.5 mt-0.5">
+            <span class="live-pulse"></span>
+            <span class="text-[10px] text-zinc-400 font-mono tracking-tight">OPEN FOR CLIENTS</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold text-zinc-400">
+        <a href="#showreel" class="hover:text-white transition-colors">Showreel</a>
+        <a href="#works" class="hover:text-white transition-colors">Featured Edits</a>
+        <a href="#services" class="hover:text-white transition-colors">What I Do</a>
+        <a href="#workflow" class="hover:text-white transition-colors">How It Works</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/917395812248?text=Hi%20Rafi%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20video%20editing%20project!" target="_blank" rel="noopener" class="btn-whatsapp text-xs py-2 px-4 shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span class="hidden sm:inline">Chat on WhatsApp</span>
+          <span class="sm:hidden">WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle-btn" class="md:hidden w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white" aria-label="Toggle Menu">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-drawer md:hidden">
+    <a href="#showreel" class="mobile-drawer-link text-sm font-semibold text-zinc-300 hover:text-white py-1">Showreel</a>
+    <a href="#works" class="mobile-drawer-link text-sm font-semibold text-zinc-300 hover:text-white py-1">Featured Edits</a>
+    <a href="#services" class="mobile-drawer-link text-sm font-semibold text-zinc-300 hover:text-white py-1">What I Do</a>
+    <a href="#workflow" class="mobile-drawer-link text-sm font-semibold text-zinc-300 hover:text-white py-1">How It Works</a>
+    <a href="#faq" class="mobile-drawer-link text-sm font-semibold text-zinc-300 hover:text-white py-1">FAQ</a>
+    <div class="pt-2 border-t border-zinc-800">
+      <a href="https://wa.me/917395812248?text=Hi%20Rafi%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20video%20editing%20project!" target="_blank" rel="noopener" class="btn-whatsapp w-full text-center text-xs py-2.5">
+        Chat on WhatsApp (+91 7395812248)
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================================
+       HERO SECTION
+       ============================================================================ -->
+  <section class="pt-28 sm:pt-36 pb-12 sm:pb-20 relative">
+    <div class="container-constrained">
+      
+      <!-- Top Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-zinc-900/90 border border-white/10 text-zinc-300 mb-6 shadow-sm">
+        <span class="live-pulse"></span>
+        <span class="text-zinc-200 font-semibold">HIGH-RETENTION SHORT-FORM & CINEMATIC EDITS</span>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="max-w-4xl mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] mb-4">
+          TURNING RAW FOOTAGE INTO <span class="text-gradient-cyan">VIRAL, SCROLL-STOPPING</span> CONTENT.
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl">
+          Hi, I'm <strong class="text-white font-semibold">A. Muhammed Rafi (RA.FX)</strong>. I craft high-retention TikToks, Reels, and cinematic videos with dynamic velocity curves, beat-synced cuts, punchy sound design, and kinetic captions built to boost views and watch time.
+        </p>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-10 sm:mb-14">
+        <a href="#showreel" class="btn-primary">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span>Watch Featured Showreel</span>
+        </a>
+        <a href="https://wa.me/917395812248?text=Hi%20Rafi%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20video%20editing%20project!" target="_blank" rel="noopener" class="btn-whatsapp">
+          <span>Hire Me / Instant WhatsApp</span>
+        </a>
+        <a href="#works" class="btn-secondary">
+          <span>Browse All Edits</span>
+        </a>
+      </div>
+
+      <!-- Key Client Value Bento Strip -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div class="bento-card p-4 sm:p-5">
+          <div class="text-xl sm:text-2xl font-black text-white mb-1">24–48h</div>
+          <div class="text-xs font-semibold text-zinc-300">Fast Turnaround</div>
+          <div class="text-[11px] text-zinc-500 mt-0.5">Quick delivery for creator schedules</div>
+        </div>
+        <div class="bento-card p-4 sm:p-5">
+          <div class="text-xl sm:text-2xl font-black text-[#00f2fe] mb-1">CapCut + Pr</div>
+          <div class="text-xs font-semibold text-zinc-300">Software Toolkit</div>
+          <div class="text-[11px] text-zinc-500 mt-0.5">CapCut Pro & Adobe Premiere Pro</div>
+        </div>
+        <div class="bento-card p-4 sm:p-5">
+          <div class="text-xl sm:text-2xl font-black text-white mb-1">Retention-First</div>
+          <div class="text-xs font-semibold text-zinc-300">Pacing & 3s Hooks</div>
+          <div class="text-[11px] text-zinc-500 mt-0.5">Eliminates drop-off, maximizes watch time</div>
+        </div>
+        <div class="bento-card p-4 sm:p-5">
+          <div class="text-xl sm:text-2xl font-black text-emerald-400 mb-1">100%</div>
+          <div class="text-xs font-semibold text-zinc-300">Revision Guarantee</div>
+          <div class="text-[11px] text-zinc-500 mt-0.5">We polish until you're completely satisfied</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       FEATURED SHOWREEL SECTION (ROCK-SOLID PLAYBACK WITH SOUND)
+       ============================================================================ -->
+  <section id="showreel" class="py-12 sm:py-16 border-t border-zinc-900 bg-zinc-950/40 relative">
+    <div class="container-constrained">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6 sm:mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="tag-pill tag-cyan font-mono text-[10px]">FEATURED REEL</span>
+            <span class="text-xs text-zinc-500 font-mono">0:45 • BEAT-SYNC VELOCITY</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">RA.FX // Speed Ramp & Beat-Sync Reel</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-zinc-400 max-w-md">
+          Engineered for short-form retention with aggressive speed ramping, precision audio sync, and cinematic motion transitions.
+        </p>
+      </div>
+
+      <!-- Hero Video Player Container -->
+      <div class="bento-card p-2.5 sm:p-3 shadow-2xl relative group">
+        <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden flex items-center justify-center">
+          
+          <!-- The Real Playable Video Element -->
+          <video 
+            id="hero-video-player"
+            playsinline 
+            webkit-playsinline 
+            preload="metadata"
+            poster="covers/Ra.fx-Cover.jpg"
+            class="w-full h-full object-cover cursor-pointer">
+            <source src="videos/RA.FX.mp4" type="video/mp4">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" type="video/mp4">
+          </video>
+
+          <!-- Loading Spinner -->
+          <div id="hero-spinner" class="video-spinner">
+            <div class="spinner-icon"></div>
+          </div>
+
+          <!-- Big Centered Play Button (Visible when paused) -->
+          <div id="hero-play-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/45 backdrop-blur-[2px] transition-opacity cursor-pointer">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#00f2fe] to-sky-400 text-black flex items-center justify-center shadow-2xl shadow-[#00f2fe]/40 hover:scale-105 active:scale-95 transition-transform">
+              <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="mt-3 text-xs sm:text-sm font-bold text-white tracking-wide uppercase font-mono drop-shadow">
+              Click to Play Showreel
+            </div>
+            <div class="text-[11px] text-zinc-300 font-mono mt-0.5">
+              Audio • Velocity Curves • 1080p
+            </div>
+          </div>
+
+          <!-- Bottom Floating Controls Overlay (Visible when playing) -->
+          <div id="hero-controls-bar" class="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity z-20">
+            <div class="flex items-center gap-3">
+              <button id="hero-toggle-play-btn" class="text-white hover:text-[#00f2fe] p-1.5 transition-colors" aria-label="Play/Pause">
+                <svg id="hero-toggle-play-icon" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <button id="hero-toggle-mute-btn" class="text-white hover:text-[#00f2fe] p-1.5 transition-colors" aria-label="Mute/Unmute">
+                <svg id="hero-toggle-mute-icon" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </button>
+              <span id="hero-timecode" class="text-xs font-mono text-zinc-300">00:00 / 00:45</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button id="hero-fullscreen-btn" class="text-white hover:text-[#00f2fe] p-1.5 transition-colors" aria-label="Fullscreen">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Meta Strip -->
+        <div class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-zinc-400 gap-2 border-t border-white/5 mt-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="tag-pill tag-cyan text-[11px]">Velocity Curves</span>
+            <span class="tag-pill text-[11px]">Beat-Sync Audio</span>
+            <span class="tag-pill text-[11px]">CapCut Pro</span>
+            <span class="tag-pill text-[11px]">Premiere Pro</span>
+          </div>
+          <a href="https://wa.me/917395812248?text=Hi%20Rafi%2C%20I%20want%20a%20video%20edit%20like%20your%20Featured%20Showreel!" target="_blank" rel="noopener" class="text-xs font-semibold text-[#00f2fe] hover:underline flex items-center gap-1">
+            Want an edit like this? Request this style →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       FEATURED WORKS & EDITS GALLERY
+       ============================================================================ -->
+  <section id="works" class="py-14 sm:py-20 border-t border-zinc-900">
+    <div class="container-constrained">
+      
+      <!-- Section Title & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-10">
+        <div>
+          <span class="tag-pill font-mono text-[10px] text-zinc-400 mb-2">CURATED WORK</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Recent Edits & Styles</h2>
+          <p class="text-xs sm:text-sm text-zinc-400 mt-1 max-w-xl">
+            Tap or click any video card to launch full HD playback with complete audio and project details.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2" id="filter-tabs-container">
+          <button class="filter-tab active" data-filter="all">All Works (5)</button>
+          <button class="filter-tab" data-filter="reels">Shorts & Reels</button>
+          <button class="filter-tab" data-filter="cinematic">Cinematic</button>
+          <button class="filter-tab" data-filter="motion">Motion & FX</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Video Cards Grid -->
+      <div id="works-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       SERVICES / WHAT I DO
+       ============================================================================ -->
+  <section id="services" class="py-14 sm:py-20 border-t border-zinc-900 bg-zinc-950/30">
+    <div class="container-constrained">
+      
+      <div class="max-w-2xl mb-10 sm:mb-12">
+        <span class="tag-pill tag-cyan font-mono text-[10px] mb-2">SERVICES & DELIVERABLES</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">What I Can Do For Your Content</h2>
+        <p class="text-xs sm:text-sm text-zinc-400 mt-1.5">
+          Everything you need to turn raw footage into high-converting videos that drive watch time and followers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        
+        <div class="bento-card p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-800/40 text-cyan-400 flex items-center justify-center text-2xl mb-4">
+              ⚡
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Viral Short-Form (Reels, TikTok, Shorts)</h3>
+            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              9:16 vertical edits crafted with 3-second retention hooks, fast-paced cuts, sound effects, and kinetic subtitles that maximize algorithmic reach.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-1.5">
+            <span class="tag-pill text-[10px]">Hook Strategy</span>
+            <span class="tag-pill text-[10px]">Velocity Ramping</span>
+            <span class="tag-pill text-[10px]">Kinetic Captions</span>
+          </div>
+        </div>
+
+        <div class="bento-card p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-800/40 text-purple-400 flex items-center justify-center text-2xl mb-4">
+              🎵
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Beat Sync & Velocity Curves</h3>
+            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              Seamless speed ramping (fast-slow-fast curves) perfectly matched to the rhythm, kick drum, and bass drops of trending audio tracks.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-1.5">
+            <span class="tag-pill text-[10px]">Audio Sync</span>
+            <span class="tag-pill text-[10px]">Whip Transitions</span>
+            <span class="tag-pill text-[10px]">Motion Blur</span>
+          </div>
+        </div>
+
+        <div class="bento-card p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-950/60 border border-emerald-800/40 text-emerald-400 flex items-center justify-center text-2xl mb-4">
+              🎙️
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Talking Head & Podcast Retention</h3>
+            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              Tight jump-cuts to eliminate pauses, punch-in zooms to emphasize key points, custom animated subtitles, and relevant B-roll overlays.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-1.5">
+            <span class="tag-pill text-[10px]">Jump-Cut Trimming</span>
+            <span class="tag-pill text-[10px]">B-Roll Integration</span>
+            <span class="tag-pill text-[10px]">Audio Cleaning</span>
+          </div>
+        </div>
+
+        <div class="bento-card p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-950/60 border border-amber-800/40 text-amber-400 flex items-center justify-center text-2xl mb-4">
+              🎨
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Color Grading & Motion Aesthetics</h3>
+            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              High-contrast punches, moody cinematic tones, clean exposure balance, light leaks, and seamless whip/zoom transitions that feel professional.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-1.5">
+            <span class="tag-pill text-[10px]">Cinematic Look</span>
+            <span class="tag-pill text-[10px]">Exposure Fixes</span>
+            <span class="tag-pill text-[10px]">Custom Overlays</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       WORKFLOW SECTION
+       ============================================================================ -->
+  <section id="workflow" class="py-14 sm:py-20 border-t border-zinc-900">
+    <div class="container-constrained">
+      
+      <div class="text-center max-w-xl mx-auto mb-10 sm:mb-14">
+        <span class="tag-pill font-mono text-[10px] text-zinc-400 mb-2">SIMPLE & FAST</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">How We Work Together</h2>
+        <p class="text-xs sm:text-sm text-zinc-400 mt-1.5">
+          From raw footage to final viral master file in 4 simple steps.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="bento-card p-5">
+          <div class="text-2xl font-black font-mono text-[#00f2fe] mb-3">01</div>
+          <h4 class="text-base font-bold text-white mb-1.5">Share Raw Footage</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Upload your raw clips and music/reference links via Google Drive, Dropbox, or WeTransfer.
+          </p>
+        </div>
+
+        <div class="bento-card p-5">
+          <div class="text-2xl font-black font-mono text-white mb-3">02</div>
+          <h4 class="text-base font-bold text-white mb-1.5">Hook & Pacing Cut</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            I craft the retention hook, sequence the timeline, and lock the rhythm to keep viewers glued.
+          </p>
+        </div>
+
+        <div class="bento-card p-5">
+          <div class="text-2xl font-black font-mono text-[#00f2fe] mb-3">03</div>
+          <h4 class="text-base font-bold text-white mb-1.5">Sound FX & Polish</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Layering whooshes, impacts, risers, kinetic captions, color grading, and dynamic speed curves.
+          </p>
+        </div>
+
+        <div class="bento-card p-5">
+          <div class="text-2xl font-black font-mono text-emerald-400 mb-3">04</div>
+          <h4 class="text-base font-bold text-white mb-1.5">Review & Delivery</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            We review the cut together, apply any tweaks, and deliver pristine 4K/1080p master files ready to post.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       FAQ SECTION
+       ============================================================================ -->
+  <section id="faq" class="py-14 sm:py-20 border-t border-zinc-900 bg-zinc-950/30">
+    <div class="container-constrained max-w-3xl">
+      
+      <div class="text-center mb-10">
+        <span class="tag-pill font-mono text-[10px] text-zinc-400 mb-2">QUESTIONS ANSWERED</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-3" id="faq-container">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       HIGH-CONVERTING FOOTER / CTA
+       ============================================================================ -->
+  <section id="contact" class="py-16 sm:py-24 border-t border-zinc-900 relative">
+    <div class="container-constrained text-center">
+      
+      <div class="max-w-2xl mx-auto mb-8 sm:mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/40 text-emerald-400 mb-4">
+          <span class="live-pulse"></span>
+          <span>AVAILABLE FOR NEW CLIENTS & RETAINERS</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+          Ready to Level Up Your Content?
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400 leading-relaxed">
+          Send me a message with your raw clips or project idea, and let's create high-retention edits that stop the scroll.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12">
+        <a href="https://wa.me/917395812248?text=Hi%20Rafi%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20video%20editing%20project!" target="_blank" rel="noopener" class="btn-whatsapp text-sm py-3 px-6 shadow-lg shadow-emerald-500/20">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Chat on WhatsApp (+91 7395812248)</span>
+        </a>
+
+        <a href="mailto:rafistarkmk85@gmail.com?subject=Video%20Editing%20Project%20Inquiry" class="btn-secondary text-sm py-3 px-6">
+          <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>rafistarkmk85@gmail.com</span>
+        </a>
+      </div>
+
+      <!-- Bottom Info -->
+      <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-3">
+        <div>
+          © 2026 RA.FX — A. Muhammed Rafi. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4 text-xs font-mono">
+          <span>CapCut Pro</span>
+          <span>•</span>
+          <span>Premiere Pro</span>
+          <span>•</span>
+          <span>Hosur, India / Worldwide</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================================
+       THEATER VIDEO MODAL (FULLSCREEN RESPONSIVE PLAYER WITH COMPLETE CONTROLS)
+       ============================================================================ -->
+  <div id="theater-modal" class="theater-modal">
+    <div class="theater-box">
+      
+      <!-- Modal Top Bar -->
+      <div class="p-3.5 sm:p-4 border-b border-white/10 flex items-center justify-between bg-zinc-950">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span id="modal-category-badge" class="tag-pill tag-cyan text-[10px] shrink-0">REEL</span>
+          <h3 id="modal-title" class="font-bold text-sm sm:text-base text-white truncate">Video Title</h3>
+        </div>
+        <button id="modal-close-btn" class="w-8 h-8 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white flex items-center justify-center transition-colors shrink-0 ml-2" aria-label="Close">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Responsive Theater Video Wrapper -->
+      <div class="theater-video-wrapper relative bg-black flex items-center justify-center max-h-[62vh] overflow-hidden">
+        
+        <video 
+          id="theater-video-el" 
+          playsinline 
+          webkit-playsinline 
+          preload="metadata"
+          class="max-h-[62vh] w-auto max-w-full object-contain cursor-pointer">
+        </video>
+
+        <!-- Loading Spinner -->
+        <div id="theater-spinner" class="video-spinner">
+          <div class="spinner-icon"></div>
+        </div>
+
+        <!-- Custom Controls Overlay -->
+        <div class="player-controls">
+          <!-- Scrubber Bar -->
+          <input type="range" id="theater-scrubber" class="custom-scrubber" min="0" max="100" value="0" step="0.1">
+          
+          <div class="flex items-center justify-between text-xs text-white">
+            <div class="flex items-center gap-3">
+              <!-- Play / Pause -->
+              <button id="theater-play-btn" class="hover:text-[#00f2fe] p-1 transition-colors" aria-label="Play/Pause">
+                <svg id="theater-play-icon" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+
+              <!-- Mute / Unmute -->
+              <button id="theater-mute-btn" class="hover:text-[#00f2fe] p-1 transition-colors" aria-label="Mute/Unmute">
+                <svg id="theater-mute-icon" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+              </button>
+
+              <!-- Timecode -->
+              <span id="theater-time" class="font-mono text-[11px] text-zinc-300">00:00 / 00:00</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Fullscreen Button -->
+              <button id="theater-fullscreen-btn" class="hover:text-[#00f2fe] p-1 transition-colors" aria-label="Fullscreen">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Bottom Info & WhatsApp CTA -->
+      <div class="p-3.5 sm:p-5 bg-zinc-950/90 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="min-w-0">
+          <p id="modal-desc" class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-2">Project description</p>
+          <div id="modal-tags" class="flex flex-wrap gap-1.5">
+            <!-- Tags rendered here -->
+          </div>
+        </div>
+        
+        <div class="shrink-0">
+          <a id="modal-whatsapp-cta" href="#" target="_blank" rel="noopener" class="btn-whatsapp text-xs py-2 px-4 w-full sm:w-auto text-center">
+            Request This Style on WhatsApp →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

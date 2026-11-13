@@ -1,0 +1,10 @@
+# GitHub rejects single files over 100MB
+videos/1104.mp4
+videos/bikeride.mp4
+videos/Ancy.mp4
+
+# Archives and logs
+*.zip
+*.log
+.DS_Store
+Thumbs.db
